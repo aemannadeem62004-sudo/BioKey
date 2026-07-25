@@ -14,7 +14,7 @@
 
 The project is structured as a decoupled full-stack application managed via Docker Compose:
 
-text
+```text
 BIOKEY/
 ├── backend/                  # FastAPI Python backend
 │   ├── app.py                # Main application entry point & routing
