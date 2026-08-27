@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+  
+  .input-modern {
+    @apply w-full px-4 py-3 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl 
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
+           transition-all duration-300;
+  }
+  
+  .btn-gradient {
+    @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl 
+           font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl 
+           font-semibold text-gray-700 hover:bg-white/80 hover:border-indigo-300 
+           transition-all duration-300;
+  }
+  
+  .progress-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full transition-all duration-500;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
